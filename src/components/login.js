@@ -6,18 +6,15 @@ const Login = () => {
     <div>
       <h1>Welcome to Bank</h1>
       <div>
-        <h3>Enter Username</h3>
+        <h3>Enter your Username</h3>
         <Input name="" onChange={""} />
       </div>
       <div>
-        <h3>Enter Password</h3>
+        <h3>Enter your Password</h3>
         <Input name="" onChange={""} />
       </div>
       <div>
-        <h3>Upload a Profile Picture</h3>
-      </div>
-      <div>
-        <button>Register</button>
+        <button>Login</button>
       </div>
     </div>
   );
