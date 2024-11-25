@@ -1,12 +1,14 @@
 import React from "react";
-import Register from "./Register";
+import Home from "./Home";
+import { Navigate } from "react-router-dom";
+import { checkToken } from "../API/storage";
 
 const FirstPage = () => {
-  return (
-    <div>
-      <Register />
-    </div>
-  );
+  if (!checkToken()) {
+    return <Navigate to="/register" />;
+  }
+
+  return <Home />;
 };
 
 export default FirstPage;

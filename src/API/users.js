@@ -7,8 +7,11 @@ async function register({ username, image, password }) {
   return response;
 }
 
-async function login({ username, password }) {
-  const response = await instance.post("/mini-project/api/auth/login"); // Data required (username, password).
+async function login(formData) {
+  const response = await instance.post(
+    "/mini-project/api/auth/login",
+    formData
+  ); // Data required (username, password).
   console.log("login", response);
   return response;
 }

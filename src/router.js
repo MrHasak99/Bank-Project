@@ -5,18 +5,23 @@ import Nav from "./components/Nav";
 import Transactions from "./components/Transactions";
 import Users from "./components/Users";
 import Profile from "./components/Profile";
+import FirstPage from "./components/FirstPage";
+import Register from "./components/Register";
+import Login from "./components/Login";
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <div>
-        <Nav />
-        <Home />
+        <div>
+          <Nav />
+        </div>
+        <FirstPage />
       </div>
     ),
   },
   {
-    path: "/trips",
+    path: "/transactions",
     element: (
       <div>
         <Nav />
@@ -25,7 +30,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/details/:slug",
+    path: "/users/:slug",
     element: (
       <div>
         <Nav />
@@ -34,11 +39,29 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/trips",
+    path: "/profile",
     element: (
       <div>
         <Nav />
         <Profile />
+      </div>
+    ),
+  },
+  {
+    path: "/register",
+    element: (
+      <div>
+        <Nav />
+        <Register />
+      </div>
+    ),
+  },
+  {
+    path: "/login",
+    element: (
+      <div>
+        <Nav />
+        <Login />
       </div>
     ),
   },

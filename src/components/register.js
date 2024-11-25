@@ -3,7 +3,7 @@ import Input from "./Input";
 import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
 import addUser from "../API/index";
-import { Formik } from "formik";
+import { Formik, Form, Field } from "formik";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -26,36 +26,18 @@ const Register = () => {
       <h1>Welcome to Bank</h1>
       <h4>
         If you have an account, please
-        <a href="https://www.google.com"> login here</a>
+        <a href="/login"> login here</a>
       </h4>
-      <div>
-        <h3>Enter Username</h3>
-        <input
-          name=""
-          onChange={(e) => {
-            setUsername(e.target.value);
-          }}
-        />
-      </div>
-      <div>
-        <h3>Enter Password</h3>
-        <input
-          type="Password"
-          name=""
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-        />
-      </div>
-      <div>
-        <h3>Upload a Profile Picture</h3>
-      </div>
-      <div>
-        <button onClick="">
-          {/* {handleSubmit} */}
-          Register
-        </button>
-      </div>
+      <Formik
+        initialValues={{ username: "", password: "", image: "" }}
+        // onSubmit={handleSubmit}
+      >
+        <Form>
+          <Field type="text" name="username" placeholder="Enter Username" />
+          <Field type="password" name="password" placeholder="Enter Password" />
+          <Field type="text" name="image" placeholder="Submit Image" />
+        </Form>
+      </Formik>
     </div>
   );
 };

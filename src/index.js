@@ -8,10 +8,13 @@ import { RouterProvider } from "react-router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-    <App />
-  </React.StrictMode>
+  <div>
+    <React.StrictMode>
+      <div>
+        <RouterProvider router={router} />
+      </div>
+    </React.StrictMode>
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function

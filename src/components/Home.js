@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
+import { Navigate } from "react-router";
+import { checkToken } from "../API/storage";
 
 const Home = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  
+};
 
-export default Home
+export default Home;
