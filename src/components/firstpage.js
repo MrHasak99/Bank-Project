@@ -1,7 +1,7 @@
 import React from "react";
-import Register from "./register";
+import Register from "./Register";
 
-const firstpage = () => {
+const FirstPage = () => {
   return (
     <div>
       <Register />
@@ -9,4 +9,4 @@ const firstpage = () => {
   );
 };
 
-export default firstpage;
+export default FirstPage;

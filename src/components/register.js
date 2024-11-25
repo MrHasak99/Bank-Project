@@ -1,5 +1,5 @@
 import React from "react";
-import Input from "./input";
+import Input from "./Input";
 import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
 import addUser from "../API/index";
