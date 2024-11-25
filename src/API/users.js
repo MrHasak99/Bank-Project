@@ -1,13 +1,13 @@
 import instance from "./index";
 import storeToken from "./auth";
 
-async function register() {
+async function register({ username, image, password }) {
   const response = await instance.post("/mini-project/api/auth/register"); // Data required: (username, image, password).
   console.log("register", response);
   return response;
 }
 
-async function login() {
+async function login({ username, password }) {
   const response = await instance.post("/mini-project/api/auth/login"); // Data required (username, password).
   console.log("login", response);
   return response;
@@ -31,7 +31,7 @@ async function getAllUsers() {
   return response;
 }
 
-async function updateYourProfile() {
+async function updateYourProfile({ image }) {
   const response = await instance.put("/mini-project/api/auth/profile"); // Data required: (image). & LOGIN REQUIERED
   console.log("updateYourProfile", response);
   return response;
@@ -78,6 +78,7 @@ export {
   getAllUsers,
   updateYourProfile,
   depositToYourAccount,
+  withdrawFromYourAccount,
   transferToAnotherUserFromYourAccount,
   getUserInfoByUserUserId,
 };
