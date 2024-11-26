@@ -8,6 +8,7 @@ import Profile from "./components/Profile";
 import FirstPage from "./components/FirstPage";
 import Register from "./components/Register";
 import Login from "./components/Login";
+
 const router = createBrowserRouter([
   {
     path: "/",

@@ -3,17 +3,23 @@ import { NavLink } from "react-router-dom";
 
 function Nav() {
   return (
-    <nav
-      className="navbar navbar-expand-lg bg-secondary text-uppercase "
-      id="mainNav"
-    >
-      <div className="container">
+    <nav className="navbar">
+      <div>
         <img src="" alt="Bank-Logo"></img>
-        <div>
-          <NavLink to="/" className="navbar-brand" href="#">
+        <div className="nav-links">
+          <NavLink
+            to="/"
+            className="navbar-brand"
+            style={({ isActive }) => {
+              return {
+                textDecoration: isActive ? "underline" : "none",
+              };
+            }}
+            href="#"
+          >
             Home
           </NavLink>
-          <li className="nav-item mx-0 mx-lg-1">
+          <li className="">
             <NavLink
               to="/transactions"
               className="nav-link py-3 px-0 px-lg-3 rounded"

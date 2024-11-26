@@ -1,9 +1,7 @@
 import React from "react";
-import { Navigate } from "react-router";
-import { checkToken } from "../API/storage";
 
 const Home = () => {
-  
+  return <div>Home</div>;
 };
 
 export default Home;

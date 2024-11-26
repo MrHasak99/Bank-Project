@@ -22,7 +22,7 @@ const Register = () => {
   //     });
   //   };
   return (
-    <div>
+    <div className="formik-container">
       <h1>Welcome to Bank</h1>
       <h4>
         If you have an account, please
@@ -33,9 +33,13 @@ const Register = () => {
         // onSubmit={handleSubmit}
       >
         <Form>
-          <Field type="text" name="username" placeholder="Enter Username" />
-          <Field type="password" name="password" placeholder="Enter Password" />
+          <Field type="text" name="username" placeholder="Username" />
+          <br />
+          <Field type="password" name="password" placeholder="Password" />
+          <br />
           <Field type="text" name="image" placeholder="Submit Image" />
+          <br />
+          <button type="submit">Register</button>
         </Form>
       </Formik>
     </div>
