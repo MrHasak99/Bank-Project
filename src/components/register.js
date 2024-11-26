@@ -4,17 +4,17 @@ import { Formik, Form, Field } from "formik";
 import { register } from "../API/auth";
 
 const Register = () => {
-  const mutation = useMutation({
-    mutationFn: (newUserData) => register(newUserData),
-  });
+  // const mutation = useMutation({
+  //   mutationFn: (newUserData) => register(newUserData),
+  // });
 
-  const handleSubmit = () => {
-    mutation.mutate({
-      username: username,
-      password: password,
-      image: image,
-    });
-  };
+  // const handleSubmit = () => {
+  //   mutation.mutate({
+  //     username: username,
+  //     password: password,
+  //     image: image,
+  //   });
+  // };
   return (
     <div className="formik-container">
       <h1>Welcome to Bank</h1>
@@ -24,7 +24,7 @@ const Register = () => {
       </h4>
       <Formik
         initialValues={{ username: "", password: "", image: "" }}
-        onSubmit={handleSubmit}
+        // onSubmit={handleSubmit}
       >
         <Form>
           <Field type="text" name="username" placeholder="Username" />

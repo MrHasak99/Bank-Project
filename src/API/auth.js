@@ -15,6 +15,4 @@ const login = async (formData) => {
   return data;
 };
 
-
-
-export { register, login, storeToken };
+export { register, login };
