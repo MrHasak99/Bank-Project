@@ -1,11 +1,14 @@
 import React from "react";
-import Input from "./Input";
 import { Formik, Form, Field } from "formik";
 
 const Login = () => {
   return (
     <div className="formik-container">
       <h1>Welcome to Bank</h1>
+      <h4>
+        If you're new and don't have an account, please
+        <a href="/register"> Register Here</a>
+      </h4>
       <div>
         <Formik
           initialValues={{ username: "", password: "", image: "" }}

@@ -1,43 +1,37 @@
 import React from "react";
-import Input from "./Input";
 import { useMutation } from "@tanstack/react-query";
-import { useState } from "react";
-import addUser from "../API/index";
 import { Formik, Form, Field } from "formik";
+import { register } from "../API/auth";
 
 const Register = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [image, setImage] = useState("");
+  const mutation = useMutation({
+    mutationFn: (newUserData) => register(newUserData),
+  });
 
-  //   const mutation = useMutation({
-  //     mutationFn: (newUserData) => addUser(newUserData),
-  //   });
-
-  //   const handleSubmit = () => {
-  //     mutation.mutate({
-  //       username: username,
-  //       password: password,
-  //       image: image,
-  //     });
-  //   };
+  const handleSubmit = () => {
+    mutation.mutate({
+      username: username,
+      password: password,
+      image: image,
+    });
+  };
   return (
     <div className="formik-container">
       <h1>Welcome to Bank</h1>
       <h4>
         If you have an account, please
-        <a href="/login"> login here</a>
+        <a href="/login"> Login Here</a>
       </h4>
       <Formik
         initialValues={{ username: "", password: "", image: "" }}
-        // onSubmit={handleSubmit}
+        onSubmit={handleSubmit}
       >
         <Form>
           <Field type="text" name="username" placeholder="Username" />
           <br />
           <Field type="password" name="password" placeholder="Password" />
           <br />
-          <Field type="text" name="image" placeholder="Submit Image" />
+          <Field type="file" name="image" placeholder="Submit Image" />
           <br />
           <button type="submit">Register</button>
         </Form>

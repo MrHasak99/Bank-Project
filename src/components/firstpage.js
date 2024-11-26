@@ -5,7 +5,7 @@ import { checkToken } from "../API/storage";
 
 const FirstPage = () => {
   if (!checkToken()) {
-    return <Navigate to="/register" />;
+    return <Navigate to="/login" />;
   }
 
   return <Home />;

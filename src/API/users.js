@@ -1,12 +1,6 @@
 import instance from "./index";
 import storeToken from "./auth";
 
-async function register({ username, image, password }) {
-  const response = await instance.post("/mini-project/api/auth/register"); // Data required: (username, image, password).
-  console.log("register", response);
-  return response;
-}
-
 async function login(formData) {
   const response = await instance.post(
     "/mini-project/api/auth/login",
