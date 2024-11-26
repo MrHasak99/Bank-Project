@@ -1,7 +1,19 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
+import { login } from "../API/auth";
+import { useMutation } from "@tanstack/react-query";
 
 const Login = () => {
+  const mutation = useMutation({
+    mutationFn: (formData) => login(formData),
+  });
+
+  const handleSubmit = (formData) => {
+    mutation.mutate({
+      username: formData.username,
+      password: formData.password,
+    });
+  };
   return (
     <div className="formik-container">
       <h1>Welcome to Bank</h1>
@@ -11,8 +23,8 @@ const Login = () => {
       </h4>
       <div>
         <Formik
-          initialValues={{ username: "", password: "", image: "" }}
-          // onSubmit={handleSubmit}
+          initialValues={{ username: "", password: "" }}
+          onSubmit={handleSubmit}
         >
           <Form>
             <Field type="text" name="username" placeholder="Username" />

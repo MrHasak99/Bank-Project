@@ -4,14 +4,18 @@ import "./index.css";
 import router from "./router";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider } from "react-router";
-
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <div>
     <React.StrictMode>
-      <div>
-        <RouterProvider router={router} />
-      </div>
+      <QueryClientProvider client={queryClient}>
+        <div>
+          <RouterProvider router={router} />
+        </div>
+      </QueryClientProvider>
     </React.StrictMode>
   </div>
 );
