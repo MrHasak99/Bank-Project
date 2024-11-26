@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Logout from "./Logout";
 
 function Nav() {
   return (
@@ -57,6 +58,7 @@ function Nav() {
             >
               Profile
             </NavLink>
+            <Logout />
           </li>
         </div>
       </div>
