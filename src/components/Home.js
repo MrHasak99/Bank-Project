@@ -37,15 +37,20 @@ const Home = () => {
         <h1>Welcome {data?.username}</h1>
         <h2>Account Balance: {data?.balance}</h2>
         <input
-          type="number"
+          className="input-amount"
+          type="text"
           onChange={(e) => {
             setValue(e.target.value);
           }}
           placeholder="Enter Desired Amount Here"
         ></input>
-        <div>
-          <button onClick={handleDeposit}>Deposit</button>
-          <button onClick={handleWithdraw}>Withdraw</button>
+        <div className="btn-amount">
+          <button className="deposit-btn" onClick={handleDeposit}>
+            Deposit
+          </button>
+          <button className="deposit-btn" onClick={handleWithdraw}>
+            Withdraw
+          </button>
         </div>
       </div>
     </div>

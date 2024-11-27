@@ -13,10 +13,11 @@ function Nav() {
       <div className="nav-links navlink">
         <div className="navlink ">
           <NavLink
-            to="/"
+            to="/home"
             style={({ isActive }) => {
               return {
                 textDecoration: isActive ? "underline" : "none",
+                color: isActive ? "red" : "black",
               };
             }}
           >
