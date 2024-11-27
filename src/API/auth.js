@@ -1,5 +1,4 @@
 import instance from "./api";
-import { setToken } from "./storage";
 
 const register = async (formData) => {
   const data = await instance.post("/mini-project/api/auth/register", formData);
@@ -38,15 +37,19 @@ async function updateYourProfile({ image }) {
   return response;
 }
 
-async function depositToYourAccount() {
-  const response = await instance.put("/mini-project/api/transactions/deposit"); // Data required: (amount). & LOGIN REQUIERED
+async function depositToYourAccount(data) {
+  const response = await instance.put(
+    "/mini-project/api/transactions/deposit",
+    data
+  ); // Data required: (amount). & LOGIN REQUIERED
   console.log("depositToYourAccount", response);
   return response;
 }
 
-async function withdrawFromYourAccount() {
+async function withdrawFromYourAccount(data) {
   const response = await instance.put(
-    "/mini-project/api/transactions/withdraw"
+    "/mini-project/api/transactions/withdraw",
+    data
   ); // Data required: (amount). & LOGIN REQUIERED
   console.log("withdrawFromYourAccount", response);
   return response;

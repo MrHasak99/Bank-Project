@@ -2,9 +2,6 @@ import React from "react";
 import { Formik, Form, Field } from "formik";
 import { login } from "../API/auth";
 import { useMutation } from "@tanstack/react-query";
-import FirstPage from "./FirstPage";
-import { checkToken } from "../API/storage";
-import { Navigate } from "react-router-dom";
 
 const Login = () => {
   const mutation = useMutation({
