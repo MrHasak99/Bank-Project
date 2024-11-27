@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import {
   depositToYourAccount,
   getYourProfile,
@@ -8,6 +8,7 @@ import {
 
 const Home = () => {
   const [value, setValue] = useState(0);
+  const queryClient = useQueryClient();
 
   const { data } = useQuery({
     queryFn: getYourProfile,
@@ -16,10 +17,16 @@ const Home = () => {
 
   const deposit = useMutation({
     mutationFn: (newValueData) => depositToYourAccount(newValueData),
+    onSuccess: () => {
+      queryClient.invalidateQueries("profiles");
+    },
   });
 
   const withdraw = useMutation({
     mutationFn: (newValueData) => withdrawFromYourAccount(newValueData),
+    onSuccess: () => {
+      queryClient.invalidateQueries("profiles");
+    },
   });
 
   const handleDeposit = () => {
