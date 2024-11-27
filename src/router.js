@@ -6,6 +6,7 @@ import Users from "./components/Users";
 import Profile from "./components/Profile";
 import FirstPage from "./components/FirstPage";
 import Register from "./components/Register";
+import Home from "./components/Home";
 import Login from "./components/Login";
 
 const router = createBrowserRouter([
@@ -13,10 +14,18 @@ const router = createBrowserRouter([
     path: "/",
     element: (
       <div>
+        <FirstPage />
+      </div>
+    ),
+  },
+  {
+    path: "/home",
+    element: (
+      <div>
         <div>
           <Nav />
         </div>
-        <FirstPage />
+        <Home />
       </div>
     ),
   },
@@ -51,7 +60,6 @@ const router = createBrowserRouter([
     path: "/register",
     element: (
       <div>
-        <Nav />
         <Register />
       </div>
     ),
@@ -60,7 +68,6 @@ const router = createBrowserRouter([
     path: "/login",
     element: (
       <div>
-        <Nav />
         <Login />
       </div>
     ),

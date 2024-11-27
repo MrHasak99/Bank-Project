@@ -1,5 +1,4 @@
 import React from "react";
-import Home from "./Home";
 import { Navigate } from "react-router-dom";
 import { checkToken } from "../API/storage";
 
@@ -8,7 +7,7 @@ const FirstPage = () => {
     return <Navigate to="/login" />;
   }
 
-  return <Home />;
+  return <Navigate to="/home" />;
 };
 
 export default FirstPage;

@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form, Field } from "formik";
 import { login } from "../API/auth";
 import { useMutation } from "@tanstack/react-query";
+import { Navigate } from "react-router";
 
 const Login = () => {
   const mutation = useMutation({
@@ -13,6 +14,7 @@ const Login = () => {
       username: formData.username,
       password: formData.password,
     });
+    <Navigate to="/" />;
   };
 
   return (
