@@ -13,7 +13,50 @@
   color: white;
 } */
 /* ------------------------------ */
+.background {
+  background-image: url("background.png");
+  background-size: 190%;
+}
+.div-home {
+  border: none;
+  background: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 30px;
+  position: relative;
+  right: -35%;
+}
 
+.div-user {
+  border: none;
+  background: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  text-align: center;
+  margin: 30px;
+}
+.div-profile {
+  border: none;
+  background: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  text-align: center;
+  margin: 30px;
+  position: relative;
+  right: -40%;
+}
 /* General Container Styling */
 .formik-container {
   background-color: #ffffff; /* White background */
@@ -96,31 +139,30 @@
   padding: 10px 20px;
   background-color: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 }
 
 /* Logo Section */
 .navbar .logo {
   display: flex;
-  align-items: center;
-  font-size: 18px;
+  width: 80px;
   font-weight: bold;
-  color: #28a745; /* Green color */
-  text-decoration: none;
 }
 
-.navbar .logo img {
-  width: 40px;
+/* .navbar .logo img {
+  width: 10px;
   margin-right: 10px;
-}
+} */
 
 /* Navigation Links */
 .navbar .nav-links {
   display: flex;
   gap: 20px;
   justify-content: center;
+  text-decoration: none;
 }
 
-.navbar .nav-links a {
+.navlink {
   text-decoration: none;
   font-size: 16px;
   color: #333; /* Dark Gray */
@@ -129,12 +171,12 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-.navbar .nav-links a:hover {
+.navbar .nav-links:hover {
   background-color: #f0f0f0; /* Light Gray */
   color: #28a745; /* Green */
 }
 
-.navbar .nav-links a.active {
+.navbar .nav-links.active {
   background-color: #e9ecef; /* Soft Gray */
   color: #333;
 }

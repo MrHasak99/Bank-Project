@@ -16,7 +16,7 @@ const Register = () => {
     });
   };
   return (
-    <div className="formik-container">
+    <div className="formik-container background">
       <h1>Welcome to Bank</h1>
       <h4>
         If you have an account, please

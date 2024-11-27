@@ -4,65 +4,67 @@ import Logout from "./Logout";
 
 function Nav() {
   return (
-    <nav className="navbar">
-      <div>
-        <img src="" alt="Bank-Logo"></img>
-        <div className="nav-links">
+    <div className="navbar ">
+      <img
+        className="logo"
+        src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/82/31/2f/82312fff-240d-ef28-200b-dbd84d35cb7f/AppIcon-0-0-1x_U007epad-0-0-85-220.png/246x0w.webp"
+        alt="Bank-Logo"
+      ></img>
+      <div className="nav-links navlink">
+        <div className="navlink ">
           <NavLink
             to="/"
-            className="navbar-brand"
             style={({ isActive }) => {
               return {
                 textDecoration: isActive ? "underline" : "none",
               };
             }}
-            href="#"
           >
             Home
           </NavLink>
-          <li className="">
-            <NavLink
-              to="/transactions"
-              className="nav-link py-3 px-0 px-lg-3 rounded"
-              style={({ isActive }) => {
-                return {
-                  textDecoration: isActive ? "underline" : "none",
-                };
-              }}
-            >
-              Transactions
-            </NavLink>
-          </li>
-          <li className="nav-item mx-0 mx-lg-1">
-            <NavLink
-              to="/users"
-              className="nav-link py-3 px-0 px-lg-3 rounded"
-              style={({ isActive }) => {
-                return {
-                  textDecoration: isActive ? "underline" : "none",
-                };
-              }}
-            >
-              Users
-            </NavLink>
-          </li>
-          <li className="nav-item mx-0 mx-lg-1">
-            <NavLink
-              to="/profile"
-              className="nav-link py-3 px-0 px-lg-3 rounded"
-              style={({ isActive }) => {
-                return {
-                  textDecoration: isActive ? "underline" : "none",
-                };
-              }}
-            >
-              Profile
-            </NavLink>
-            <Logout />
-          </li>
+        </div>
+        <div className="navlink">
+          <NavLink
+            to="/transactions"
+            className="nav-link py-3 px-0 px-lg-3 rounded"
+            style={({ isActive }) => {
+              return {
+                textDecoration: isActive ? "underline" : "none",
+              };
+            }}
+          >
+            Transactions
+          </NavLink>
+        </div>
+        <div className="navlink">
+          <NavLink
+            to="/users"
+            style={({ isActive }) => {
+              return {
+                textDecoration: isActive ? "underline" : "none",
+              };
+            }}
+          >
+            Users
+          </NavLink>
+        </div>
+        <div className="navlink">
+          <NavLink
+            to="/profile"
+            style={({ isActive }) => {
+              return {
+                textDecoration: isActive ? "underline" : "none",
+              };
+            }}
+          >
+            Profile
+          </NavLink>
         </div>
       </div>
-    </nav>
+      <div>
+        <Logout />
+      </div>
+    </div>
   );
 }
 

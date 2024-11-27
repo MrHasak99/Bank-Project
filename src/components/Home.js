@@ -10,7 +10,12 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Welcome {data.username}</h1>
+      <div className="div-home">
+        <h1>Welcome {data?.username}</h1>
+      </div>
+      <div className="div-home">
+        <h1>Welcome {data?.username}</h1>
+      </div>
     </div>
   );
 };
