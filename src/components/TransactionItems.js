@@ -1,10 +1,10 @@
 const TransactionItems = ({ transaction }) => {
   return (
-    <>
-      <div>
+    <div>
+      <div className="div-trans">
         <h1>{transaction.amount}</h1>
       </div>
-    </>
+    </div>
   );
 };
 

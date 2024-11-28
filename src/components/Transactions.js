@@ -13,10 +13,8 @@ const Transactions = () => {
     <TransactionItems transaction={transaction} />
   ));
   return (
-    <div className="bg-[#F9E3BE] flex flex-col justify-center items-center ">
-      <div className=" flex flex-col flex-wrap md:flex-row gap-[20px] w-[76vw]  justify-center items-center mb-[50px]">
-        {transactionList}
-      </div>
+    <div>
+      <div>{transactionList}</div>
     </div>
   );
 };

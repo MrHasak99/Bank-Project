@@ -45,7 +45,7 @@ const Home = () => {
         <h2>Account Balance: {data?.balance}</h2>
         <input
           className="input-amount"
-          type="text"
+          type="number"
           onChange={(e) => {
             setValue(e.target.value);
           }}
