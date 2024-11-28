@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { transferToAnotherUserFromYourAccount } from "../API/auth";
-import { QueryClient, useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 const UserItem = ({ user }) => {
   const [value, setValue] = useState(0);
+  const queryClient = useQueryClient();
 
   const mutate = useMutation({
     mutationFn: (newValueData) =>
       transferToAnotherUserFromYourAccount(newValueData),
     onSuccess: () => {
-      QueryClient.invalidateQueries("users");
+      queryClient.invalidateQueries("users");
     },
   });
 
@@ -24,7 +25,6 @@ const UserItem = ({ user }) => {
         <img src={user.image} alt={`${user.username}'s Profile`} />
         <p>Balance: {user.balance}</p>
         <input
-          className="input-amount"
           type="number"
           onChange={(e) => {
             setValue(e.target.value);
