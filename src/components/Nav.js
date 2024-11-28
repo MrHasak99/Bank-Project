@@ -4,7 +4,7 @@ import Logout from "./Logout";
 
 function Nav() {
   return (
-    <div className="navbar ">
+    <div className="navbar">
       <img
         className="logo"
         src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/82/31/2f/82312fff-240d-ef28-200b-dbd84d35cb7f/AppIcon-0-0-1x_U007epad-0-0-85-220.png/246x0w.webp"
@@ -17,7 +17,7 @@ function Nav() {
             style={({ isActive }) => {
               return {
                 textDecoration: isActive ? "underline" : "none",
-                color: isActive ? "red" : "black",
+                color: isActive ? "g" : "black",
               };
             }}
           >
