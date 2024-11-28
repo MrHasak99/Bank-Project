@@ -323,3 +323,10 @@
 .navbar .logout-btn:hover {
   background-color: #218838; /* Darker Green */
 }
+
+.box input {
+  display: flex;
+
+  font-size: 18px;
+  margin: 20px;
+}
