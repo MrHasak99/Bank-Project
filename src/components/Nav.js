@@ -17,7 +17,7 @@ function Nav() {
             style={({ isActive }) => {
               return {
                 textDecoration: isActive ? "underline" : "none",
-                color: isActive ? "g" : "black",
+                color: isActive ? "red" : "black",
               };
             }}
           >
@@ -31,6 +31,7 @@ function Nav() {
             style={({ isActive }) => {
               return {
                 textDecoration: isActive ? "underline" : "none",
+                color: isActive ? "red" : "black",
               };
             }}
           >
@@ -43,6 +44,7 @@ function Nav() {
             style={({ isActive }) => {
               return {
                 textDecoration: isActive ? "underline" : "none",
+                color: isActive ? "red" : "black",
               };
             }}
           >
@@ -55,6 +57,7 @@ function Nav() {
             style={({ isActive }) => {
               return {
                 textDecoration: isActive ? "underline" : "none",
+                color: isActive ? "red" : "black",
               };
             }}
           >
